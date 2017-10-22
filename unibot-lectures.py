@@ -38,7 +38,7 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    if req.get("result").get("action") != "lectureTime":
         return {}
     baseurl = "https://tp.data.uib.no/KEYqe3u4awar/ws/1.4/course.php?"
     yql_query = makeYqlQuery(req)
@@ -81,9 +81,9 @@ def makeWebhookResult(data):
 #    if (location is None) or (item is None) or (units is None):
 #        return {}
 
-    condition = item.get('condition')
-    if condition is None:
-        return {}
+#    condition = item.get('condition')
+#    if condition is None:
+#        return {}
 
     # print(json.dumps(item, indent=4))
 
