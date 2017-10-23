@@ -45,7 +45,7 @@ def processRequest(req):
     if yql_query is None:
       
         return {}
-    yql_url = baseurl + urlencode({"id=INFO282"}) + "&fromdate=" + "2017-11-23"+ "&todate=" + "2017-11-23" + "&lang=en&sem=17h&termnr=2"
+    yql_url = baseurl + "id=INFO212" + "&fromdate=" + "2017-11-23"+ "&todate=" + "2017-11-23" + "&lang=en&sem=17h&termnr=2"
     result = urlopen(yql_url).read()
     data = json.loads(result)
     res = makeWebhookResult(data)
